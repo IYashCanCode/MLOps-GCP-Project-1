@@ -1,0 +1,10 @@
+apiVersion: skaffold/v3alpha1
+kind: Config
+metadata:
+  name: bank-churn-api
+deploy:
+  cloudrun:
+    region: us-central1
+manifests:
+  rawYaml:
+    - cloudrun-service.yaml

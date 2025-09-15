@@ -1,0 +1,10 @@
+apiVersion: deploy.cloud.google.com/v1
+kind: Target
+metadata:
+  name: bank-churn-staging
+description: "Staging target for Bank Churn API"
+run:
+  location: projects/gcp-sandbox-syngenta-mlops/locations/us-central1
+  
+  
+  

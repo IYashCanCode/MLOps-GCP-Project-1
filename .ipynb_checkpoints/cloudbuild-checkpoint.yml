@@ -1,0 +1,19 @@
+steps:
+  # Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build', 
+      '-t', 
+      'us-central1-docker.pkg.dev/gcp-sandbox-syngenta-mlops/cicd-aiml/bank-churn-model:latest', 
+      '.'
+    ]
+
+  # Push Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'push', 
+      'us-central1-docker.pkg.dev/gcp-sandbox-syngenta-mlops/cicd-aiml/bank-churn-model:latest'
+    ]
+
+images:
+  - 'us-central1-docker.pkg.dev/gcp-sandbox-syngenta-mlops/cicd-aiml/bank-churn-model:latest'

@@ -1,0 +1,9 @@
+apiVersion: deploy.cloud.google.com/v1
+kind: DeliveryPipeline
+metadata:
+  name: bank-churn-pipeline
+description: "Delivery pipeline for Bank Churn API"
+serialPipeline:
+  stages:
+  - targetId: bank-churn-staging
+    profiles: []
